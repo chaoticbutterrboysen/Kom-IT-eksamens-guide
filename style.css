@@ -1,0 +1,313 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.title-section {
+    background-color: #004285;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+}
+
+.title-section h1 {
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 50px 24px;
+    background: #ecf5ff;
+    border-radius: 32px;
+    box-shadow: 0 20px 45px rgba(52, 152, 219, 0.08);
+    max-width: 1040px;
+    margin: 0 auto 40px;
+}
+
+nav a, .menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #3498db;
+    color: white;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.hero-decorations {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    display: block;
+    opacity: 0.28;
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 15%;
+    left: 8%;
+}
+
+.square {
+    width: 110px;
+    height: 110px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.16);
+    bottom: 10%;
+    right: 12%;
+    transform: rotate(18deg);
+}
+
+.line {
+    width: 220px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.18);
+    top: 45%;
+    right: 18%;
+    border-radius: 999px;
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    top: 35%;
+    left: 68%;
+}
+
+.menu {
+    padding: 0 20px 40px;
+}
+
+.menu-banner {
+    background: linear-gradient(180deg, #f6faff 0%, #edf5ff 100%);
+    border-radius: 34px;
+    padding: 36px 28px;
+    box-shadow: 0 24px 55px rgba(52, 152, 219, 0.08);
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.menu-banner-text {
+    max-width: 760px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.menu-banner-text h3 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    color: #104d8d;
+}
+
+.menu-banner-text p {
+    margin: 0;
+    color: #3b5c81;
+    font-size: 16px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+/* SEKTIONER */
+section {
+    padding: 50px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: #004285;
+    font-size: 18px;
+}
+
+/* Kasser */
+.box {
+    width: 180px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 18px;
+    transition: 0.3s;
+    padding: 16px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.box-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.box-desc {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Hover effekt */
+.box:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Farver */
+.begreber { background-color: #3498db; }
+.projekt { background-color: #2ecc71; }
+.analyse { background-color: #e67e22; }
+.metoder { background-color: #9b59b6; }
+.rapport{ background-color: #e74c3c; }
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004285;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.download-link:hover {
+    background-color: #27ae60;
+}
+
+#begreber {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+#begreber h2 {
+    text-align: center;
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+/* Unique colors for each card */
+.afsender { border-left: 5px solid #3498db; }
+.maalgruppe { border-left: 5px solid #2ecc71; }
+.kommunikationssituation { border-left: 5px solid #e67e22; }
+.kommunikationsstrategi { border-left: 5px solid #9b59b6; }
+.medievalg { border-left: 5px solid #e74c3c; }
+.layout { border-left: 5px solid #1abc9c; }
+.typografi { border-left: 5px solid #f39c12; }
+.farvelære { border-left: 5px solid #8e44ad; }
+.gestaltlove { border-left: 5px solid #16a085; }
+.brugervenlighed { border-left: 5px solid #d35400; }
+.interaktionsdesign { border-left: 5px solid #c0392b; }
+.skitse-prototype { border-left: 5px solid #27ae60; }
+.ideudvikling { border-left: 5px solid #2980b9; }
+.feedback { border-left: 5px solid #f1c40f; }
+.etik { border-left: 5px solid #e67e22; }
+.ophavsret { border-left: 5px solid #9b59b6; }
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #004285;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
