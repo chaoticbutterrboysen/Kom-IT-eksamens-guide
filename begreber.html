@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Begreber - Kom/IT-C Eksamen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <section class="title-section">
+        <h1>Kom/IT-C</h1>
+    </section>
+    <section class="menu">
+    </section>
+</nav>
+
+<a href="index.html" class="back-button">Tilbage til forsiden</a>
+
+<!-- BEGREBER CONTENT -->
+<section id="begreber">
+    <h2>Begreber</h2>
+    <div class="card afsender" data-concept="afsender">
+        <h3>Afsender</h3>
+    </div>
+    <div class="card maalgruppe" data-concept="maalgruppe">
+        <h3>Målgruppe</h3>
+    </div>
+    <div class="card kommunikationssituation" data-concept="kommunikationssituation">
+        <h3>Kommunikationssituation</h3>
+    </div>
+    <div class="card kommunikationsstrategi" data-concept="kommunikationsstrategi">
+        <h3>Kommunikationsstrategi</h3>
+    </div>
+    <div class="card medievalg" data-concept="medievalg">
+        <h3>Medievalg</h3>
+    </div>
+    <div class="card layout" data-concept="layout">
+        <h3>Layout</h3>
+    </div>
+    <div class="card typografi" data-concept="typografi">
+        <h3>Typografi</h3>
+    </div>
+    <div class="card farvelære" data-concept="farvelære">
+        <h3>Farvelære</h3>
+    </div>
+    <div class="card gestaltlove" data-concept="gestaltlove">
+        <h3>Gestaltlove</h3>
+    </div>
+    <div class="card brugervenlighed" data-concept="brugervenlighed">
+        <h3>Brugervenlighed</h3>
+    </div>
+    <div class="card interaktionsdesign" data-concept="interaktionsdesign">
+        <h3>Interaktionsdesign</h3>
+    </div>
+    <div class="card skitse-prototype" data-concept="skitse-prototype">
+        <h3>Skitse-prototype</h3>
+    </div>
+    <div class="card ideudvikling" data-concept="ideudvikling">
+        <h3>Idéudvikling</h3>
+    </div>
+    <div class="card feedback" data-concept="feedback">
+        <h3>Feedback</h3>
+    </div>
+    <div class="card etik" data-concept="etik">
+        <h3>Etik</h3>
+    </div>
+    <div class="card ophavsret" data-concept="ophavsret">
+        <h3>Ophavsret</h3>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-text"></div>
+    </div>
+</div>
+
+<script>
+    // Modal elements
+    var modal = document.getElementById("modal");
+    var modalTitle = document.getElementById("modal-title");
+    var modalText = document.getElementById("modal-text");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Content for each concept
+    var concepts = {
+        afsender: {
+            title: "Afsender",
+            content: "<p><strong>Definition:</strong> Afsenderen er den person, gruppe eller organisation, der formidler budskabet. Afsenderens troværdighed, formål og holdning påvirker, hvordan modtageren opfatter teksten eller mediet.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Afsenderen er central, da din projektidentitet og troværdighed afhænger af, hvordan du præsenterer dig selv som afsender. Det hjælper med at skabe tillid og klarhed i kommunikationen.</p><p><strong>Eksempel fra dit projekt:</strong> I dit eksamensprojekt kunne du som afsender være en studerende, der præsenterer en analyse af sociale medier, hvor din rolle som ekspert styrker budskabet.</p><p><strong>Typiske fejl:</strong> At glemme at identificere sig selv tydeligt, hvilket kan gøre kommunikationen anonym og mindre troværdig.</p>"
+        },
+        maalgruppe: {
+            title: "Målgruppe",
+            content: "<p><strong>Definition:</strong> Målgruppen er de mennesker, der skal modtage budskabet. Den kan opdeles efter alder, køn, uddannelse, interesser, vaner og forventninger.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Uden en klar målgruppe risikerer du, at dit projekt ikke rammer de rette personer, hvilket gør kommunikationen ineffektiv og projektet mindre relevant.</p><p><strong>Eksempel fra dit projekt:</strong> Hvis dit projekt handler om digital kommunikation, kunne målgruppen være unge studerende, som du tilpasser sprog og kanaler til.</p><p><strong>Typiske fejl:</strong> At definere målgruppen for bredt, så budskabet bliver for generelt og mister sin kraft.</p>"
+        },
+        kommunikationssituation: {
+            title: "Kommunikationssituation",
+            content: "<p><strong>Definition:</strong> Kommunikationssituationen er den konkrete sammenhæng, hvor kommunikationen sker. Den omfatter tid, sted, relation mellem afsender og modtager, formål og kanal.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det hjælper dig med at tilpasse din kommunikation til konteksten, så den føles naturlig og relevant for modtageren.</p><p><strong>Eksempel fra dit projekt:</strong> I en eksamensrapport kunne situationen være en formel præsentation for lærere, hvor du vælger et professionelt sprog og layout.</p><p><strong>Typiske fejl:</strong> At ignorere konteksten, fx at bruge uformelt sprog i en formel situation, hvilket kan virke uprofessionelt.</p>"
+        },
+        kommunikationsstrategi: {
+            title: "Kommunikationsstrategi",
+            content: "<p><strong>Definition:</strong> Kommunikationsstrategi er den overordnede plan for, hvordan du når dine mål med kommunikationen. Den handler om budskab, synsvinkel, tone, kanalvalg og timing.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> En strategi sikrer, at dit projekt er sammenhængende og effektivt, og at du ikke spilder ressourcer på irrelevante elementer.</p><p><strong>Eksempel fra dit projekt:</strong> Din strategi kunne være at bruge sociale medier til at nå målgruppen hurtigt, med et klart budskab om digital etik.</p><p><strong>Typiske fejl:</strong> At mangle en strategi, hvilket fører til kaotisk kommunikation uden klar retning.</p>"
+        },
+        medievalg: {
+            title: "Medievalg",
+            content: "<p><strong>Definition:</strong> Medievalg er beslutningen om, hvilke medier og kanaler der bedst når målgruppen. Det kan være sociale medier, print, web, video, lyd eller en kombination.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det sikrer, at dit budskab når frem til de rette personer på den mest effektive måde, hvilket er afgørende for projektets succes.</p><p><strong>Eksempel fra dit projekt:</strong> For et projekt om webdesign kunne du vælge en hjemmeside som medie, kombineret med videoer på YouTube.</p><p><strong>Typiske fejl:</strong> At vælge medier, der ikke passer til målgruppen, fx at bruge print til en digital målgruppe.</p>"
+        },
+        layout: {
+            title: "Layout",
+            content: "<p><strong>Definition:</strong> Layout er den måde, visuelle elementer er organiseret på en side. Det omfatter placering af tekst, billeder, overskrifter, knapper og hvidt rum.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Et godt layout gør informationen let at finde og forstå, hvilket forbedrer brugeroplevelsen og vurderingen af dit projekt.</p><p><strong>Eksempel fra dit projekt:</strong> I din rapport kunne layoutet have en klar hierarki med overskrifter, billeder og tabeller for at guide læseren.</p><p><strong>Typiske fejl:</strong> Overfyldte sider uden hvidt rum, hvilket gør det svært at læse og navigere.</p>"
+        },
+        typografi: {
+            title: "Typografi",
+            content: "<p><strong>Definition:</strong> Typografi handler om valg og brug af skrifttyper. Det inkluderer fontfamilie, størrelse, linjeafstand, kontrast og vægt.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> God typografi sikrer læsbarhed og understøtter budskabet visuelt, hvilket er essentielt for professionel kommunikation.</p><p><strong>Eksempel fra dit projekt:</strong> Brug en sans-serif font som Arial for digitalt indhold for bedre læsbarhed på skærme.</p><p><strong>Typiske fejl:</strong> At vælge dekorative fonte, der er svære at læse, eller ignorere linjeafstand, hvilket reducerer læsbarheden.</p>"
+        },
+        "farvelære": {
+            title: "Farvelære",
+            content: "<p><strong>Definition:</strong> Farvelære er studiet af, hvordan farver påvirker hinanden og modtagerens følelser. Farver kan skabe stemning, fremhæve information og lede øjet.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Farver påvirker opfattelsen af dit projekt og kan gøre det mere engagerende eller troværdigt.</p><p><strong>Eksempel fra dit projekt:</strong> Brug blå farver for tillid i en rapport om IT-sikkerhed.</p><p><strong>Typiske fejl:</strong> Dårlig kontrast, der gør tekst ulæselig, eller farver, der ikke passer til budskabet.</p>"
+        },
+        gestaltlove: {
+            title: "Gestaltlove",
+            content: "<p><strong>Definition:</strong> Gestaltlove er psykologiske principper for, hvordan vi opfatter visuelle elementer som helheder. De hjælper med at forstå, hvorfor vi ser former og grupper på bestemte måder.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> De hjælper med at designe intuitive layouts, der gør dit projekt lettere at forstå og bruge.</p><p><strong>Eksempel fra dit projekt:</strong> Brug nærhedsloven til at gruppere relaterede elementer i din præsentation.</p><p><strong>Typiske fejl:</strong> At ignorere Gestaltlove, hvilket fører til forvirrende designs uden klar struktur.</p>"
+        },
+        brugervenlighed: {
+            title: "Brugervenlighed",
+            content: "<p><strong>Definition:</strong> Brugervenlighed handler om, hvor let og effektivt en bruger kan bruge et produkt eller en løsning. Fokus er på forståelighed, navigation, feedback og fejlforebyggelse.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det sikrer, at dit projekt ikke kun ser godt ud, men også fungerer godt for brugeren.</p><p><strong>Eksempel fra dit projekt:</strong> Sørg for klare knapper og feedback i en app-prototype.</p><p><strong>Typiske fejl:</strong> Komplicerede interfaces, der frustrerer brugeren og reducerer effektiviteten.</p>"
+        },
+        interaktionsdesign: {
+            title: "Interaktionsdesign",
+            content: "<p><strong>Definition:</strong> Interaktionsdesign handler om, hvordan brugeren og systemet kommunikerer med hinanden. Det omfatter knapper, feedback, flow og reaktioner på brugerhandlinger.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det gør dit digitale produkt interaktivt og brugervenligt, hvilket er afgørende for moderne kommunikation.</p><p><strong>Eksempel fra dit projekt:</strong> Design en hjemmeside, hvor klik på menuer giver klar feedback.</p><p><strong>Typiske fejl:</strong> Manglende feedback, så brugeren ikke ved, om handlingen lykkedes.</p>"
+        },
+        "skitse-prototype": {
+            title: "Skitse-prototype",
+            content: "<p><strong>Definition:</strong> En skitse-prototype er en tidlig model af et design. Den kan være lavopløst (skitser på papir) eller højopløst (digital prototype), men formålet er at teste ideer og struktur.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det giver mulighed for tidlig feedback og forbedringer, før det endelige produkt udvikles.</p><p><strong>Eksempel fra dit projekt:</strong> Tegn skitser af din app-interface før kodning.</p><p><strong>Typiske fejl:</strong> At springe prototyping over, hvilket fører til dyre fejl senere.</p>"
+        },
+        ideudvikling: {
+            title: "Idéudvikling",
+            content: "<p><strong>Definition:</strong> Idéudvikling er processen, hvor du genererer, sorterer og forbedrer kreative løsninger. Det kan ske gennem brainstorming, mindmaps, skitser og diskussion.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det sikrer, at dit projekt er innovativt og løser problemet effektivt.</p><p><strong>Eksempel fra dit projekt:</strong> Brug brainstorming til at udvikle ideer til en kommunikationskampagne.</p><p><strong>Typiske fejl:</strong> At stoppe efter første idé, uden at udforske bedre alternativer.</p>"
+        },
+        feedback: {
+            title: "Feedback",
+            content: "<p><strong>Definition:</strong> Feedback er respons fra brugere eller andre, der vurderer dit arbejde. Det kan være positivt, kritisk eller konkret og bruges til at forbedre indholdet.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det hjælper med at identificere styrker og svagheder, så du kan forbedre projektet.</p><p><strong>Eksempel fra dit projekt:</strong> Få klassekammerater til at give feedback på din rapport.</p><p><strong>Typiske fejl:</strong> At ignorere feedback eller kun søge positiv respons.</p>"
+        },
+        etik: {
+            title: "Etik",
+            content: "<p><strong>Definition:</strong> Etik handler om ansvar og værdier i kommunikation. Det drejer sig om respekt, ærlig fremstilling, privatliv, mangfoldighed og bæredygtighed.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det sikrer, at dit projekt er ansvarligt og ikke skader eller misleder andre.</p><p><strong>Eksempel fra dit projekt:</strong> Sørg for anonymitet i undersøgelser for at beskytte deltageres privatliv.</p><p><strong>Typiske fejl:</strong> At overse etiske aspekter, fx ved at bruge manipulerende teknikker.</p>"
+        },
+        ophavsret: {
+            title: "Ophavsret",
+            content: "<p><strong>Definition:</strong> Ophavsret er retten til et kreativt værk som tekst, billeder, musik, film eller software. Det betyder, at andre ikke må bruge eller kopiere værket uden tilladelse.</p><p><strong>Hvorfor er begrebet vigtigt i eksamensprojektet?</strong> Det beskytter dit eget arbejde og sikrer, at du respekterer andres rettigheder.</p><p><strong>Eksempel fra dit projekt:</strong> Angiv kilder for billeder brugt i din præsentation.</p><p><strong>Typiske fejl:</strong> At kopiere materiale uden tilladelse, hvilket kan føre til plagiatanklager.</p>"
+        }
+    };
+
+    // Add event listeners to all cards
+    document.querySelectorAll('.card').forEach(function(card) {
+        card.onclick = function() {
+            var concept = this.getAttribute('data-concept');
+            if (concepts[concept]) {
+                modalTitle.textContent = concepts[concept].title;
+                modalText.innerHTML = concepts[concept].content;
+                modal.style.display = "block";
+            }
+        };
+    });
+
+    // Close modal when clicking X
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
+</body>
+</html>
